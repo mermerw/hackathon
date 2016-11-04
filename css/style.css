@@ -1,0 +1,27 @@
+#footer {
+    position:fixed; left:0px; bottom:0px; height:60px; width:100%; background:#eee; }
+
+#footer .menus1{
+
+    float:left;}
+#footer .menus2{
+padding-left: 100px;
+
+}
+#footer .menus3{
+
+    float: right;
+}
+.title.navbar-brand.page-scroll {
+    color: #E41E26;
+    font-size: 22px;
+}
+
+.content.container{
+    color: #E41E26;
+}
+
+.profile{
+    float: right;
+
+}
