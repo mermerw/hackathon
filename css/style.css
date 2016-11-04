@@ -1,14 +1,18 @@
 #footer {
     position:fixed; left:0px; bottom:0px; height:60px; width:100%; background:#eee; }
 
-#footer .menus1{
+#footer .menus1 {
 
     float:left;}
-#footer .menus2{
-padding-left: 100px;
+#footer .menus2 {
+/*padding-left: 475px;*/
+/*padding-right: 475px;*/
+position: absolute;
+left: 45%;
+
 
 }
-#footer .menus3{
+#footer .menus3 {
 
     float: right;
 }
