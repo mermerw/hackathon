@@ -1,0 +1,8 @@
+#footer {
+    position:fixed; left:0px; bottom:0px; height:30px; width:100%; background:#999; }
+
+.title{
+    color: #E41E26;
+    font-weight: 700;
+    text-transform: uppercase;
+}
