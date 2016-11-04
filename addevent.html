@@ -60,19 +60,16 @@
     <section id="services">
        <div class="container">
 
-    <form class="form_bg well form-horizontal" action=" " method="post"  id="contact_form">
-<fieldset>
+    <form class=" form-horizontal" action=" " method="post"  id="contact_form">
+
 
 <!-- Form Name -->
 <div class="form-group">
-  <label class="col-md-4 control-label">Meal type</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-4 control-label">Title</label>
+  <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-apple"></i></span>
-  <select name="meal" class="form-control selectpicker" >
-      <option value=" ">Lunch</option>
-      <option>Dinner</option>
-    </select>
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <input name="title" placeholder="Come to join us!" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -80,14 +77,11 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Gender</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-4 control-label">Place</label>
+  <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <select name="gender" class="form-control selectpicker" >
-      <option value=" ">Female</option>
-      <option>Male</option>
-    </select>
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <input name="place" placeholder="Marina Bay" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -95,89 +89,32 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Aged</label>
+  <label class="col-md-4 control-label">Time</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <input name="time" placeholder="2016-12-25" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
-        <input name="age1" class="form-control" id="age1" type="text">
-
-        <span style="vertical-align: middle">To</span>
-        <input name="age2" class="form-control"  type="text" id="age2" style="float: right" >
-
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label">Marital status</label>
-  <div class="col-md-4 selectContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-heart-empty"></i></span>
-  <select name="marital" class="form-control selectpicker" >
-      <option value=" " >Single</option>
-      <option>Married</option>
-      <option>In relationship</option>
-    </select>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 
-<div class="form-group">
-  <label class="col-md-4 control-label">Nationality</label>
-  <div class="col-md-4 selectContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-  <select name="nationality" class="form-control selectpicker" >
-      <option>Chinese</option>
-      <option>Singaporean</option>
-      <option>Malaysian</option>
-      <option>Korean</option>
-      <option>Thailand</option>
-      <option>Indonesian</option>
-      <option>Vietnamese</option>
-    </select>
-    </div>
-  </div>
-</div>
 
 <!-- Text input-->
 
-<div class="form-group">
-  <label class="col-md-4 control-label">Department</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <select name="department" class="form-control selectpicker" >
-      <option>Game Technical Operation</option>
-      <option>Labs</option>
-      <option>Shopee</option>
-      <option>SA</option>
-      <option>HR</option>
-    </select>
-    </div>
-  </div>
-</div>
 
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Position</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
-  <select name="position" class="form-control selectpicker" >
-      <option>Developer</option>
-      <option>Operation</option>
-      <option>Data Analyst</option>
-      <option>Product Manager</option>
-      <option>Network Engineer</option>
-      <option>HR</option>
-    </select>
-    </div>
-  </div>
-</div>
 <!-- Select Basic -->
 
 
@@ -188,17 +125,18 @@
 
 <!-- radio checks -->
  <div class="form-group">
-                        <label class="col-md-4 control-label">How many people do you invite?</label>
+                        <label class="col-md-4 control-label">Interest</label>
                         <div class="col-md-4">
                             <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="1" /> 1 to 1
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="hosting" value="2" /> 1 to more
-                                </label>
+                                    <label>
+                                   <span > <input type="radio" name="hosting" value="1" /> <img src="img/cycling.png" style="height: 30px"></span>
+                                   <span style="margin-left:40px"> <input type="radio" name="hosting" value="2"  /> <img src="img/movie.png" style="height: 30px"> </span>
+                                   <span style="margin-left:40px"> <input type="radio" name="hosting" value="3" /> <img src="img/gym.png" style="height: 30px"></span>
+                                    <span style="margin-left:40px"> <input type="radio" name="hosting" value="4" /> <img src="img/soccer.png" style="height: 30px"></span>
+                                    <span style="margin-left:40px"> <input type="radio" name="hosting" value="5" /> <img src="img/tennis.png" style="height: 30px"></span>
+
+
+                                    </label>
                             </div>
                         </div>
                     </div>
@@ -212,11 +150,11 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-danger" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <button type="submit" class="btn btn-danger" >Submit <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
-</fieldset>
+
 </form>
 </div>
     </div><!-- /.container -->
@@ -224,9 +162,9 @@
 
     <div id="footer">
       <div class="container">
-        <a href="date.html" class="menus1"><img  src="img/red1.png" height="50px"></a>
+        <a href="date.html" class="menus1"><img  src="img/date.png" height="50px"></a>
           <a href="index.html" class="menus2"><img  src="img/dashboard.png" height="50px"></a>
-          <a href="group.html" class="menus3"><img  src="img/group.png" height="50px"></a>
+          <a href="group.html" class="menus3"><img  src="img/red3.png" height="50px"></a>
     </div>
 
     <!-- jQuery -->

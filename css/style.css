@@ -31,6 +31,15 @@ left: 45%;
 }
 #success_message{ display: none;}
 
-#age{
+#age1{
     width: 46%;
 }
+
+#age2{
+    width: 46%;
+}
+
+.meal.container{
+    color: #f05f40;
+}
+
