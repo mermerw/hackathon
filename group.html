@@ -53,6 +53,7 @@
             <div class="title navbar-header">
 
                 <a class=" title navbar-brand page-scroll" href="#page-top">One Garena</a>
+                <a class="profile" href="login.html"><img src="img/user.png" height="50px"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,41 +76,41 @@
         </div>
         <div class="container">
             <div class="row" id="content">
-                <div class="col-lg-3 col-md-6 panel panel-default" style="margin-left: 10px;margin-right:10px">
-                    <div class="panel-body">
-                        <p style="margin-bottom: 10px">
-                            <img style="width:30px;height:30px" src="./img/tennis.png"/>
-                            <span style="margin-left:10px"><b>This is title</b></span>
-                        </p>
-                        <p class="text-muted pmargin" style="font-size:10pt"><img src="./img/position.png" class="small-img"/> <span>One-North #1283728</span></p>                      <p class="text-muted pmargin"><img src="./img/calendar.png" class="small-img"/><span>2016-10-11</span></p>
-                        <p class="text-muted pmargin"><img class="small-img" src="./img/phone.png">12381721</p>
-                        <span style="float:right">
-                            <span>10 going</span>
-                            <button class="btn btn-danger">Go</button>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
+                <!--<div class="col-lg-3 col-md-6 panel panel-default" style="margin-left: 10px;margin-right:10px">-->
+                    <!--<div class="panel-body">-->
+                        <!--<p style="margin-bottom: 10px">-->
+                            <!--<img style="width:30px;height:30px" src="./img/tennis.png"/>-->
+                            <!--<span style="margin-left:10px"><b>This is title</b></span>-->
+                        <!--</p>-->
+                        <!--<p class="text-muted pmargin" style="font-size:10pt"><img src="./img/position.png" class="small-img"/> <span>One-North #1283728</span></p>                      <p class="text-muted pmargin"><img src="./img/calendar.png" class="small-img"/><span>2016-10-11</span></p>-->
+                        <!--<p class="text-muted pmargin"><img class="small-img" src="./img/phone.png">12381721</p>-->
+                        <!--<span style="float:right">-->
+                            <!--<span>10 going</span>-->
+                            <!--<button class="btn btn-danger">Go</button>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6 text-center">-->
+                    <!--<div class="service-box">-->
+                        <!--<i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>-->
+                        <!--<h3>Ready to Ship</h3>-->
+                        <!--<p class="text-muted">You can use this theme as is, or you can make changes!</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6 text-center">-->
+                    <!--<div class="service-box">-->
+                        <!--<i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>-->
+                        <!--<h3>Up to Date</h3>-->
+                        <!--<p class="text-muted">We update dependencies to keep things fresh.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6 text-center">-->
+                    <!--<div class="service-box">-->
+                        <!--<i class="fa fa-4x fa-heart text-primary sr-icons"></i>-->
+                        <!--<h3>Made with Love</h3>-->
+                        <!--<p class="text-muted">You have to make your websites with love these days!</p>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
         </div>
     </section>
@@ -121,10 +122,11 @@
     
 
     <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-      </div>
-    </div>
+        <div class="container">
+            <a href="date.html" class="menus1"><img  src="img/date.png" height="50px"></a>
+            <a href="index.html" class="menus2"><img  src="img/dashboard.png" height="50px"></a>
+            <a href="group.html" class="menus3"><img  src="img/red3.png" height="50px"></a>
+        </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -143,15 +145,21 @@
     <script src="js/common.js"></script>
     <script>
         $( document ).ready(function() {
-            $.get(HOST+"group/list", function(data) {
+            $.get("/group/list", function(data) {
                 html = ""
                 for (i=0;i<data.length;i++) {
-                    html += "<div class='col-lg-3 col-md-6 panel panel-default' style='margin-left: 10px;margin-right:10px'> <div class='panel-body'> <p style='margin-bottom: 10px'> <img style='width:30px;height:30px' src='./img/" + data[i].interest + ".png'/> <span style='margin-left:10px'><b>" + data[i].name + "</b></span> </p> <p class='text-muted pmargin' style='font-size:10pt'><img src='./img/position.png' class='small-img'/> <span>" + data[i].venue + "</span></p>                      <p class='text-muted pmargin'><img src='./img/calendar.png' class='small-img'/><span>" + data[i].time + "</span></p> <p class='text-muted pmargin'><img class='small-img' src='./img/phone.png'> " + data[i].phone + " </p> <span style='float:right'> <span>" + data[i].join + " going</span> <button class='btn btn-danger'>Go</button> </span> </div> </div>"
+                    html += "<div class='col-lg-3 col-md-6 panel panel-default' style='margin-left: 10px;margin-right:10px'> <div class='panel-body'> <p style='margin-bottom: 10px'> <img style='width:30px;height:30px' src='./img/" + data[i].interest + ".png'/> <span style='margin-left:10px'><b>" + data[i].name + "</b></span> </p> <p class='text-muted pmargin' style='font-size:10pt'><img src='./img/position.png' class='small-img'/> <span>" + data[i].venue + "</span></p>                      <p class='text-muted pmargin'><img src='./img/calendar.png' class='small-img'/><span>" + data[i].time + "</span></p> <p class='text-muted pmargin'><img class='small-img' src='./img/phone.png'> " + data[i].phone + " </p> <span style='float:right'> <span>" + data[i].join + " going</span> <button class='btn btn-danger' onclick='go(" + data[i].id + ")'>Go</button> </span> </div> </div>"
                 }
 
                 $("#content").html(html);
             });
         });
+
+        function go(id) {
+            $.get("/group/join?id=" + id, function(data){
+
+            })
+        }
     </script>
 </body>
 
