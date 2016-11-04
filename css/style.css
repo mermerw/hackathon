@@ -1,5 +1,5 @@
 #footer {
-    position:fixed; left:0px; bottom:0px; height:60px; width:100%; background:#eee; }
+    position:fixed; left:0px; bottom:0px; height:60px; width:100%; background:#eee; z-index: 999;}
 
 #footer .menus1 {
 
@@ -28,4 +28,9 @@ left: 45%;
 .profile{
     float: right;
 
+}
+#success_message{ display: none;}
+
+#age{
+    width: 46%;
 }
