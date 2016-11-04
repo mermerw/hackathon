@@ -60,7 +60,7 @@
     <section id="services">
        <div class="container">
 
-    <form class="form_bg well form-horizontal" action=" " method="post"  id="contact_form">
+    <form class="form_bg well form-horizontal" action="/eating/add" method="get"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -85,8 +85,8 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <select name="gender" class="form-control selectpicker" >
-      <option value=" ">Female</option>
-      <option>Male</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
     </select>
     </div>
   </div>
@@ -99,10 +99,10 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
-        <input name="age1" class="form-control" id="age1" type="text">
+        <input name="age1" class="form-control" id="age1" type="text" value="15">
 
         <span style="vertical-align: middle">To</span>
-        <input name="age2" class="form-control"  type="text" id="age2" style="float: right" >
+        <input name="age2" class="form-control"  type="text" id="age2" style="float: right" value="25" >
 
     </div>
   </div>
@@ -115,9 +115,9 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-heart-empty"></i></span>
   <select name="marital" class="form-control selectpicker" >
-      <option value=" " >Single</option>
-      <option>Married</option>
-      <option>In relationship</option>
+      <option value="Single" >Single</option>
+      <option value="Married" >Married</option>
+      <!--<option>In relationship</option>-->
     </select>
     </div>
   </div>
@@ -130,13 +130,13 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
   <select name="nationality" class="form-control selectpicker" >
-      <option>Chinese</option>
-      <option>Singaporean</option>
-      <option>Malaysian</option>
-      <option>Korean</option>
-      <option>Thailand</option>
-      <option>Indonesian</option>
-      <option>Vietnamese</option>
+      <option value="Chinese">Chinese</option>
+      <option value="Singaporean">Singaporean</option>
+      <option value="Malyasian">Malaysian</option>
+      <option value="Korean">Korean</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Indonesian">Indonesian</option>
+      <option value="Vietnamese">Vietnamese</option>
     </select>
     </div>
   </div>
@@ -150,11 +150,11 @@
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
   <select name="department" class="form-control selectpicker" >
-      <option>Game Technical Operation</option>
-      <option>Labs</option>
-      <option>Shopee</option>
-      <option>SA</option>
-      <option>HR</option>
+      <option value="GTO">Game Technical Operation</option>
+      <option value="Labs">Labs</option>
+      <option value="Shopee">Shopee</option>
+      <option value="SA">SA</option>
+      <option value="HR">HR</option>
     </select>
     </div>
   </div>
@@ -168,12 +168,12 @@
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
   <select name="position" class="form-control selectpicker" >
-      <option>Developer</option>
-      <option>Operation</option>
-      <option>Data Analyst</option>
+      <option value="web developer">Developer</option>
+      <option value="Operation">Operation</option>
+      <option value="Data engineer">Data Analyst</option>
       <option>Product Manager</option>
       <option>Network Engineer</option>
-      <option>HR</option>
+      <option value="HR">HR</option>
     </select>
     </div>
   </div>
@@ -242,6 +242,22 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            if (window.location.hash.length > 0) {
+                alert("submit success, please wait for him/her accept your request:)")
+                return
+            }
+            setInterval(go, 1000)
+        });
+        function go(id) {
+            $.get("/eating/check", function(data){
+                if (data.err == 0) {
+                    window.location.href = "/static/accept.html#" + data.from
+                }
+            })
+        }
+    </script>
 
 </body>
 

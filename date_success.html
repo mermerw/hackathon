@@ -71,7 +71,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="name" placeholder="Name" class="form-control"  type="text">
+  <input  name="name" id="name" placeholder="Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -83,7 +83,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+  <input name="phone" id="phone" placeholder="(845)555-1212" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -127,6 +127,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $.get("/eating/get", function(data){
+                $("#name").val(data.name)
+                $("#phone").val(data.phone)
+            })
+        });
+    </script>
 
 </body>
 
