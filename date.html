@@ -25,7 +25,7 @@
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -192,7 +192,7 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hosting" value="1" /> 1 to 1
+                                    <input type="radio" name="hosting" checked="checked" value="1" /> 1 to 1
                                 </label>
                             </div>
                             <div class="radio">
@@ -246,14 +246,23 @@
         $( document ).ready(function() {
             if (window.location.hash.length > 0) {
                 alert("submit success, please wait for him/her accept your request:)")
+                setInterval(check_confirm, 1000)
                 return
             }
             setInterval(go, 1000)
         });
+
+        function check_confirm() {
+            $.get("/eating/check_confirm", function(data){
+                if (data.err == 0) {
+                    window.location.href = "/static/date_success.html#" + data.from + "&" + data.phone
+                }
+            })
+        }
         function go(id) {
             $.get("/eating/check", function(data){
                 if (data.err == 0) {
-                    window.location.href = "/static/accept.html#" + data.from
+                    window.location.href = "/static/accept.html#" + data.from;
                 }
             })
         }
